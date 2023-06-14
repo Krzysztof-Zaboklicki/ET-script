@@ -1,9 +1,3 @@
-
-# Introduction
-# Loading libraries
-# Importing and merging the data
-# Marking the invalid data
-
 ####################################################################
 #######################  INTRODUCTION  #############################
 ####################################################################
@@ -63,9 +57,9 @@ for (k in 1:10)
 {
   # For each tranche of the participants I declare data.frames
   # containing MessageEvent, Condition_variables and BinocularEyeSampleEvent files
-  df_all[[k]]       = data.frame()
-  conditions_all[[k]]     = data.frame()
-  messages_all[[k]] = data.frame()
+  df_all[[k]]         = data.frame()
+  conditions_all[[k]] = data.frame()
+  messages_all[[k]]   = data.frame()
   
   
   for (j in 1:10)
@@ -83,13 +77,13 @@ for (k in 1:10)
                                       'right_ppd_x', 'right_ppd_y', 'right_velocity_x', 'right_velocity_y', 'right_velocity_xy',
                                       'left_pupil_measure1_type', 'left_pupil_measure2_type', 'right_pupil_measure1_type', 'right_pupil_measure2_type', 'status'))
       
-      # I create columns containing information about the participant name and trial number, where necessary
+      # I create columns containing information about the participant name and trial number, where necessary.
       cond$ID     = files[10*(k-1)+j]
       cond$trial  = 1:84
       
       messages$ID = files[10*(k-1)+j]
       if   (k == 3 && j == 8){messages = messages[-c(1,2,3,4),]} # One of the datasets has different
-      else                   {messages = messages[-c(1,2),]}     # amount of columns, I deal with here.
+      else                   {messages = messages[-c(1,2),]}     # amount of columns, I deal with it here.
       messages$trial_n = sort(rep(1:(nrow(messages)/2),2))       # I also sort trial number column to fit my needs.
       
       data_temp$trial = NA
