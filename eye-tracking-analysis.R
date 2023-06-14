@@ -4,7 +4,7 @@
 
 # This script was created to analyze data from an eye-tracking study.
 # 100 participants took part in the study, each one was presented
-# either with 4 or 85 
+# with 84 trials of 3 types.
 
 # Data from each participant is stored in 3 different files.
 # MessageEvent files contain information about starting and ending timestamps of each trial for each participant.
