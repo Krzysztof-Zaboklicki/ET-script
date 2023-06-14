@@ -45,12 +45,12 @@ loadfonts(device = "win")
 
 
 # I need to find names of the files I import in the folder
-files        = dir("E:\\data\\sopid", "*hdf5", recursive = T) 
+files = dir("E:\\data\\sopid", "*hdf5", recursive = T) 
 
 # I declare lists for the datasets I import
-df_all       = list()
-conditions_all     = list()
-messages_all = list()
+df_all         = list()
+conditions_all = list()
+messages_all   = list()
 
 
 for (k in 1:10)
@@ -660,7 +660,7 @@ df[which(df$AOI_resampled == F),]$gaze_type     = "noise"
 
 
 #par(bg = 'white')
-#hist(df[which(df$gaze_type == "end fixation" & df$gaze_type_length>0.025 & df$clue == "ZMIEÅ\u0083 ZNACZENIE"),]$gaze_type_length,
+#hist(df[which(df$gaze_type == "end fixation" & df$gaze_type_length>0.025 & df$clue == "ZMIEÃ…\u0083 ZNACZENIE"),]$gaze_type_length,
 #     breaks = seq(0.025, 3.1, 0.025), col = "gray", border = "black")
 #ggplot(data = wyniki2, aes(x = time, y = right_pupil_measure1, color = clue )) +
 #  geom_line() +
